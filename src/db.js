@@ -1,8 +1,8 @@
 const Sequelize = require('sequelize');
 const db={}
 
-const sequelize = new Sequelize('kub-digital','root','', { // nom de la BDD, username, password
-host: 'localhost',
+const sequelize = new Sequelize('heroku_21d12b47036cce6','baef4768d15273','cf133448', { // nom de la BDD, username, password
+host: 'eu-cdbr-west-03.cleardb.net',
 dialect: 'mysql',
 operatorsAliases:false,
 //logging: false,//passer a true pour voir les différentes requêtes effectuées par l'ORM
