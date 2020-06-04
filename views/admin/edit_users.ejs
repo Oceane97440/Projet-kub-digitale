@@ -1,0 +1,96 @@
+<% include ../layouts/doctype.ejs %>
+
+   
+
+
+
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card"style="margin-top: 20%;">
+            <div class="login-blue p-3 shadow-lg rounded">
+                <div class="pt-3">
+                    <h2 class="text-dark">Admin | Ajout d'un utilisateur</h2>
+                </div>
+        
+                <form id="signup-form" data-parsley-validate class="mt-5" role="form" action="/admin/update/<%= user.id %>" method="POST"> 
+                    
+                    
+                    <div class="form-group">
+                        <input type="text" 
+                            name="nom_user"
+                            class="form-control form-control-sm"
+                            required 
+                            value="<%= user.nom %>">
+                    </div>
+        
+        
+                    <div class="form-group">
+                        <input type="text" 
+                            name="prenom_user"
+                            class="form-control form-control-sm" 
+                            required 
+                            value="<%= user.prenom %>">
+                    </div>
+        
+        
+                    <div class="form-group">
+                        <input type="email" 
+                            name="email_user"
+                            class="form-control form-control-sm" 
+                            required
+                            value="<%= user.email %>"
+                           >
+                    </div>
+        
+                
+        
+                    <div class="form-group">
+                        <input type="text" 
+                            name="profession_user"
+                            class="form-control form-control-sm" 
+                            required 
+                            value="<%= user.profession_user %>">
+                    </div>
+                    
+                    <div class="form-group">
+                        <input type="tel" 
+                            name="telephone_user"
+                            
+                            class="form-control form-control-sm" 
+                            required 
+                            value="<%= user.telephone %>"
+                            > <!--+262 692 12 34 56 -->
+                    </div>
+        
+        
+
+                    <div class="form-group">
+                            <select value="<%= user.statut %>" name="statut" id="">
+                                <option value="1">Actif</option>
+                                <option value="0">Inactif</option>
+
+                            </select>
+                    </div>
+        
+        
+                    <div class="mt-5">
+                        <button id="signup-submit-btn" class="btn btn-sm btn-danger col">
+                            Modif 
+                        </button>
+                    </div>
+        
+                    
+                    
+                 
+                </form>
+            </div>
+        </div>
+        </div>
+    </div> 
+    <% include ../layouts/doctype_end.ejs %>
+
+
+
+
+
