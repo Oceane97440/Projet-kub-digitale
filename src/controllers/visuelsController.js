@@ -2,7 +2,6 @@ const visuelsController = {};
 const Visuels = require('../models/visuels');
 const path = require('path');
 const sharp = require('sharp');
-const validator = require('validator');
 /**
  * 
  * @param {object} req Express request object
