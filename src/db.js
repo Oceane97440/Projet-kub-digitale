@@ -1,8 +1,8 @@
 const Sequelize = require('sequelize');
 const db={}
 
-const sequelize = new Sequelize('','','', { // nom de la BDD, username, password
-host: '',
+const sequelize = new Sequelize(process.env.DB,process.env.USER,process.env.PASSWORD, { // nom de la BDD, username, password
+host: process.env.HOST,
 dialect: 'mysql',
 operatorsAliases:false,
 //logging: false,//passer a true pour voir les différentes requêtes effectuées par l'ORM
