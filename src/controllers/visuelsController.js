@@ -77,13 +77,15 @@ visuelsController.create = async (req, res) => { // POST :/visuels/create
             });
 
         } else {
+            res.redirect('/visuels');
+
             //  res.send('fichier upload')
-            res.json({
-                result: 'KO',
-                success: {
-                    message: "Fichier ajouté!"
-                }
-            });
+            // res.json({
+            //     result: 'KO',
+            //     success: {
+            //         message: "Fichier ajouté!"
+            //     }
+            // });
 
         }
 

@@ -217,7 +217,7 @@ campagneController.recap = (req, res) => {
 
         ]
     }).then(campagne => {
-        console.log(campagne)
+        //console.log(campagne)
         res.render('campagnes/recap', {
             campagne: campagne,
             title: "Listes des campagnes"

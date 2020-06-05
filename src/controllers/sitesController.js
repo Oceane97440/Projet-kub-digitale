@@ -40,7 +40,7 @@ sitesController.add = (req, res) => { //GET:admin/sites/add
  * @memberof sitesController
  */
 sitesController.create = (req, res) => { // POST : admin/sites/create
-    console.log(req.body);
+   // console.log(req.body);
     Sites.create({
         nom_site: req.body.nom_site,
         statut: req.body.statut,

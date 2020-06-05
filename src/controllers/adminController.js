@@ -23,7 +23,7 @@ adminController.index = (req, res) => { // GET : /admin/
             user: user,
             title: "Dashboard_admin"
         });
-        console.log(user);
+       // console.log(user);
     });
 
 }
@@ -64,7 +64,7 @@ adminController.edit = (req, res) => { // GET : /admin/edit:id
         }
 
     }).then(user => {
-        console.log(user)
+       // console.log(user)
         res.render('admin/edit_users', {
             user: user,
             title: "Edit user"

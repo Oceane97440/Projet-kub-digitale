@@ -262,7 +262,7 @@ usersController.registre = (req, res) => { // POST : /users/registre
                         res.cookie(userId, Token, {
                             maxAge: 3600000,
                             httpOnly: true,
-                            secure: false,// set to true if your using https
+                            secure: true,// set to true if your using https
                         });
                         // return res.status(201).json({
                         //     'ID': userId,
