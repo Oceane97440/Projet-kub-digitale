@@ -90,12 +90,12 @@ visuelsController.create = async (req, res) => { // POST :/visuels/create
 
     } else {
         // return res.send('un problème est survenu. veuillez réessayer')
-        return res.json({
-            result: alerte,
-            error: {
-                message: "Un problème est survenu. veuillez réessayer"
-            }
-        });
+        // return res.json({
+        //     result: alerte,
+        //     error: {
+        //         message: "Un problème est survenu. veuillez réessayer"
+        //     }
+        // });
 
 
 
@@ -108,7 +108,7 @@ visuelsController.create = async (req, res) => { // POST :/visuels/create
             return res.status(500).send(err)
     });
 
-    fileName = path.parse(uploadedFile.name).name; /* remplace l'extension originale par .jpg*/
+    fileName = path.parse(uploadedFile.name).name +"jpeg"; /* remplace l'extension originale par .jpg*/
 
     file = await sharp(uploadedFile.data) /**resize si hauteur plus haut que 400 et converti en jp */
         .resize({
