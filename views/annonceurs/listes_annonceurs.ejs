@@ -49,7 +49,6 @@
                 <table class="table table-striped table-dark">
                     <thead class="thead-dark" >
                       <tr>
-                          <th scope="col">#</th>
                           <th scope="col">Nom de la société </th>
                           <th scope="col">Adresse  de la société</th>
                           <th scope="col">Action</th>
@@ -60,8 +59,7 @@
                     <% for(let i=0; i < annonceurs.length; i++) {%>
                       <tbody>
                             <tr>
-                                <th scope="row"><%= annonceurs[i].id %></th>
-                                <td><%= annonceurs[i].nom_societe %></td>
+                                <th scope="row"><%= annonceurs[i].nom_societe %></th>
                                 <td><%= annonceurs[i].adresse %></td>
 
                     

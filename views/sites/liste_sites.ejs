@@ -36,7 +36,6 @@
             <table class="table table-sm table-striped">
               <thead class="thead-dark" >
                 <tr>
-                    <th scope="col">#</th>
                     <th scope="col">Noms du site</th>
                     <th scope="col">Status</th>
                     <th scope="col">Action</th>
@@ -47,8 +46,7 @@
             <% for(let i=0; i < sites.length; i++) {%>
             <tbody>
                 <tr>
-                    <th scope="row"><%= sites[i].id %></th>
-                    <td><%= sites[i].nom_site %></td>
+                    <th scope="row"><%= sites[i].nom_site %></th>
                     <td><%= sites[i].statut %></td>
         
         

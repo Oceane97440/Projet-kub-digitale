@@ -120,7 +120,6 @@
             <table class="table table-striped table-dark">
                 <thead class="thead-dark">
                     <tr>
-                        <th scope="col">#</th>
                         <th scope="col">Nom</th>
                         <th scope="col">Période de diffusion</th>
                         <th scope="col">Visuel upload</th>
@@ -136,8 +135,7 @@
                 <% for(let i=0; i < campagnes.length; i++) {%>
                 <tbody>
                     <tr>
-                        <th scope="row"><%= campagnes[i].id %></th>
-                        <td><%= campagnes[i].nom_campagne %></td>
+                        <th scope="row"><%= campagnes[i].nom_campagne %></th>
                         <td><%= campagnes[i].date_d %>
                             <br>
                             <%= campagnes[i].date_f %>
