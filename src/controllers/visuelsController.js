@@ -77,8 +77,6 @@ visuelsController.create = async (req, res) => { // POST :/visuels/create
             });
 
         } else {
-            res.redirect('/visuels');
-
             //  res.send('fichier upload')
             // res.json({
             //     result: 'KO',
@@ -92,12 +90,12 @@ visuelsController.create = async (req, res) => { // POST :/visuels/create
 
     } else {
         // return res.send('un problème est survenu. veuillez réessayer')
-        // return res.json({
-        //     result: alerte,
-        //     error: {
-        //         message: "Un problème est survenu. veuillez réessayer"
-        //     }
-        // });
+        return res.json({
+            result: alerte,
+            error: {
+                message: "Un problème est survenu. veuillez réessayer"
+            }
+        });
 
 
 
@@ -143,24 +141,24 @@ visuelsController.create = async (req, res) => { // POST :/visuels/create
  * @param - id: number
  * @memberof visuelsController
  */
-visuelsController.edit = (req, res) => { // GET :/visuels/edit:id
+// visuelsController.edit = (req, res) => { // GET :/visuels/edit:id
 
 
-    Visuels.findOne({
-        where: {
-            id: req.params.id
-        }
+//     Visuels.findOne({
+//         where: {
+//             id: req.params.id
+//         }
 
-    }).then(visuel => {
-        //console.log(visuel)
-        res.render('visuels/edit_visuels', {
-            visuel: visuel,
-            title: "Edit visuels"
-        })
-    })
+//     }).then(visuel => {
+//         //console.log(visuel)
+//         res.render('visuels/edit_visuels', {
+//             visuel: visuel,
+//             title: "Edit visuels"
+//         })
+//     })
 
 
-}
+// }
 
 /**
  * 
@@ -168,26 +166,26 @@ visuelsController.edit = (req, res) => { // GET :/visuels/edit:id
  * @param {object} res Express response object
  * @memberof visuelsController
  */
-visuelsController.update = (req, res) => { // POST : visuels/update/:id
-    //  console.log(req.body);
+// visuelsController.update = (req, res) => { // POST : visuels/update/:id
+//     //  console.log(req.body);
 
-    Visuels.findOne({
-        where: {
-            id: req.params.id
-        }
-    }).then(visuels => {
-        Visuels.update({
-            nom_visuel: req.body.nom_visuel,
-            image: req.body.image_visuel
+//     Visuels.findOne({
+//         where: {
+//             id: req.params.id
+//         }
+//     }).then(visuels => {
+//         Visuels.update({
+//             nom_visuel: req.body.nom_visuel,
+//             image: req.body.image_visuel
 
 
-        }, {
-            where: {
-                id: req.params.id
-            }
-        }).then(res.redirect('/visuels'))
-    })
-}
+//         }, {
+//             where: {
+//                 id: req.params.id
+//             }
+//         }).then(res.redirect('/visuels'))
+//     })
+// }
 /**
  * 
  * @param {object} req Express request object

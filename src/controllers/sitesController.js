@@ -40,10 +40,10 @@ sitesController.add = (req, res) => { //GET:admin/sites/add
  * @memberof sitesController
  */
 sitesController.create = (req, res) => { // POST : admin/sites/create
-   // console.log(req.body);
+    console.log(req.body);
     Sites.create({
         nom_site: req.body.nom_site,
-        statut: req.body.statut,
+        statut: false,
     }).then(res.redirect('/admin/sites'))
 }
 
@@ -90,7 +90,7 @@ sitesController.update = (req, res) => { // POST : admin/sites/update/:id
     }).then(site => {
         Sites.update({
             nom_site: req.body.nom_site,
-            statut: req.body.statut,
+            statut: false,
         }, {
             where: {
                 id: req.params.id
