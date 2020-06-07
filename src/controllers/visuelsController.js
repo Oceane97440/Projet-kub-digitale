@@ -70,11 +70,11 @@ visuelsController.create = async (req, res) => { // POST :/visuels/create
         if (uploadedFile.size >= 90000) {
             // return res.send('Fichier volumineux')
             return res.json({
-                result: alerte,
                 error: {
                     message: "Fichier volumineux"
                 }
             });
+
 
         } else {
             //  res.send('fichier upload')
@@ -91,7 +91,6 @@ visuelsController.create = async (req, res) => { // POST :/visuels/create
     } else {
         // return res.send('un problème est survenu. veuillez réessayer')
         return res.json({
-            result: alerte,
             error: {
                 message: "Un problème est survenu. veuillez réessayer"
             }
@@ -112,9 +111,9 @@ visuelsController.create = async (req, res) => { // POST :/visuels/create
 
     file = await sharp(uploadedFile.data) /**resize si hauteur plus haut que 400 et converti en jp */
         .resize({
-            height: 500,
+            height: 300,
             /**resize si hauteur plus haut que 500px*/
-            width: 600,
+            width: 300,
             /**resize si largeur plus haut que 600px*/
             withoutEnlargement: true /**Ne pas agrandir si la largeur ou la hauteur sont déjà inférieures aux dimensions spécifiées*/
         })
